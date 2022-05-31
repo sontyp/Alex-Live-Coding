@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farben</title>
+
+    <style>
+        body{
+            background-color: lightsalmon;
+        }
+        
+        p{
+            color: gold;
+        }
+        div{
+            width: 200px;
+            margin: 5px;
+            height: 200px;
+            border: 1px solid black;
+        }
+        #eins{
+            background-color: rgb(192, 28, 55);
+        }
+        #zwei{
+            background-color: rgba(105, 30, 204, 0.945);
+        }
+
+        #drei{
+            background-color: #DA7680;
+        }
+        div > div{
+            background-color: aqua;
+        }
+        div > p{
+            color: white;
+        }
+        .child{
+            border-radius: 50px;
+            width: 100px;
+            height: 100px;
+            border: 5px solid black;
+        }
+
+        
+        .another-child{
+            border-radius: 25px;
+        }
+
+
+        /* 
+            //!  DUAL - 0, 1
+
+            //! DEZIMAL - 0,1, 2, 3, 4, 5, 6, 7, 8, 9
+
+            //! HEXADEZIMAL - 0,1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, E, F
+
+         */
+        
+
+    </style>
+</head>
+
+<body>
+    <h1>Arbeiten mit Farben</h1>
+
+
+    <h2>Vorgegebene Farben</h2>
+    <div id="eins">
+        <section>   <!-- Kind von div -->
+            <p>Meine Schriftfarbe soll weiß sein</p> <!-- Enkel von div -->
+            <div class="child another-child"></div>
+        </section>
+        
+    </div>
+    
+
+    <!-- Rot Grün Blau -->
+    <h2>RGB</h2>
+    <div id="zwei">
+        <p>Meine Schriftfarbe soll weiß sein</p>  <!-- Kind von div -->
+        <div class="child"></div>
+    </div>
+
+
+    <!-- Hexadezimal -->
+    <h2>HEX</h2>
+    <div id="drei">
+        <p>Meine Schriftfarbe soll weiß sein</p> <!-- Kind von div -->
+        <div class="child"></div>
+    </div>
+
+</body>
+
+</html>
