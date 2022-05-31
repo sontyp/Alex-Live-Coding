@@ -1,0 +1,25 @@
+
+
+h1 {
+    color: green;
+    text-transform: uppercase;
+}
+
+html {
+    max-width: 1300px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+p {
+    color: red;
+}
+
+.brown-paragraph {
+    color: brown;
+}
+
+
+#black-section {
+    background-color: black;
+}
