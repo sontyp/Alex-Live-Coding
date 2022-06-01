@@ -1,15 +1,51 @@
 
-html {
-    margin: 0 auto;
-    width: 80%;
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
 }
 
-/* 
-main {
+html {
+    width: 90vw;
+    height: 100vh;
+    
     margin: 0 auto;
+    /* width: 100%; */
+}
+
+
+main {
+    font-size: 0;
+    /* margin: 0 auto;
     width: 80%;
-    background-color: grey;
-} */
+    background-color: grey; */
+}
+
+article {
+    display: inline-block;
+    width: 70%;
+    height: 100vh;
+    background-color: lightblue;
+    overflow: auto;
+    font-size: 12pt;
+}
+
+aside {
+    display: inline-block;
+    width: 15%;
+    height: 100vh;
+    background-color: lightskyblue;
+    font-size: 12pt;
+    overflow: auto;
+}
+
+ul li {
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
 
 span {
     display: block;
@@ -17,6 +53,11 @@ span {
     border: 2px dotted orange;
     padding-left: 2px;
     padding-right: 2px;
+}
+
+.menu-item {
+    margin-bottom: 1em;
+    border: 2px solid black;
 }
 
 .box {
@@ -33,6 +74,7 @@ span {
 
 #section-1 {
     background-color: darkkhaki;
+    margin-left: 0;
 }
 
 
@@ -46,20 +88,3 @@ span {
     background-color: navy;
     color: white;
 }
-
-
-article {
-    display: inline-block;
-    /* width: 70%; */
-    height: 100vh;
-    background-color: lightblue;
-    overflow: auto;
-}
-
-aside {
-    display: inline-block;
-    width: 20%;
-    height: 100vh;
-    background-color: lightskyblue;
-}
-
