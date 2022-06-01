@@ -1,0 +1,65 @@
+
+html {
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* 
+main {
+    margin: 0 auto;
+    width: 80%;
+    background-color: grey;
+} */
+
+span {
+    display: block;
+    color: red;
+    border: 2px dotted orange;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.box {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border: solid 5px coral;
+    margin: 10px auto;
+    padding: 10px;
+    overflow: auto;
+
+    box-shadow: 5px -10px 5px grey;
+}
+
+#section-1 {
+    background-color: darkkhaki;
+}
+
+
+#section-2 {
+    background-color: darkviolet;
+    color: white;
+}
+
+#section-3 {
+    /* display: block; */
+    background-color: navy;
+    color: white;
+}
+
+
+article {
+    display: inline-block;
+    /* width: 70%; */
+    height: 100vh;
+    background-color: lightblue;
+    overflow: auto;
+}
+
+aside {
+    display: inline-block;
+    width: 20%;
+    height: 100vh;
+    background-color: lightskyblue;
+}
+
