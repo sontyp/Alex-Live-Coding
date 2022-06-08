@@ -1,0 +1,73 @@
+
+
+main {
+    box-sizing: border-box;
+    max-width: 70vw;
+    margin: 20vh auto;
+    border: 2px solid black;
+}
+
+
+.box {
+    float: left;
+    /* border: 2px solid green; */
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+}
+
+.box p {
+    text-align: center;
+    margin: auto auto;
+}
+
+p {
+    /* border: 2px solid rebeccapurple; */
+}
+
+.cleared {
+    clear: left;
+}
+
+
+
+
+
+/* Klasse fuer alle Boxen mit Groesse (und Flussrichtung) */
+.column {
+    /* Wenn alle Boxen nebeneinander stehen sollen -> Fliessrichtung: links */
+    float: left;
+    /* width: 33%; */
+    width: calc(100% / 3);
+    height: 200px;
+}
+
+
+.column-calculated {
+    /* Wenn alle Boxen nebeneinander stehen sollen -> Fliessrichtung: links */
+    float: left;
+    width: 33%;
+    /* width: calc(100% / 3); */
+    height: 200px;
+}
+
+/* Linke Spalte mit Farbe (und Flussrichtung links) */
+#col-left {
+    /* Flussrichtung kann hier explizit angegeben werden */
+    /* float: left; */
+    background-color: darkgreen;
+}
+
+/* Linke Spalte mit Farbe (und Flussrichtung links) */
+#col-mid {
+    /* Flussrichtung kann hier explizit angegeben werden */
+    /* float: left; */
+    background-color: darkorange;
+}
+
+/* Linke Spalte mit Farbe (und Flussrichtung links) */
+#col-right {
+    /* Flussrichtung kann hier explizit angegeben werden */
+    /* float: right; */
+    background-color: darkred;
+}
