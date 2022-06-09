@@ -1,0 +1,62 @@
+
+html {
+    font-size: 32pt;
+    /* position: relative; */
+}
+
+main {
+    width: 60vw;
+    background-color: coral;
+    margin: 0 auto;
+    height: 200vh;
+    /* position: relative; */
+}
+
+
+.parent {
+    background-color: lightblue;
+    max-width: 50vw;
+    margin: 0 auto;
+    padding: 10px;
+    height: 50vh;
+
+    /* position: relative; */
+}
+
+#child-1 {
+    background-color: blueviolet;
+
+    /* position: relative;
+    left: 20px;
+    top: 20px; */
+
+}
+
+#child-2 {
+    background-color: orange;
+    
+    /* position: absolute;
+    top: 0;
+    left: 5px; */
+
+    width: 100%;
+}
+
+#child-3 {
+    background-color: brown;
+
+
+    position: sticky;
+    top: 20px;
+    left: 0;
+}
+
+header {
+    position: sticky;
+    top: 0;
+}
+
+header nav {
+    position: sticky;
+    top: 0;
+}
