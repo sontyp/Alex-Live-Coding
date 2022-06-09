@@ -1,0 +1,68 @@
+
+/* Resetten unnoetiger Browser Settings */
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    height: 200vh;
+}
+
+
+/* header {
+    position: sticky;
+    top: 0;
+} */
+
+header {
+    /* height: inherit; */
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    z-index: -1;
+
+    background-color: aquamarine;
+}
+
+header h1 {
+    background-color: darkseagreen;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Die Navbar */
+header nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+    background-color: lightgray;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    border: 1px solid red;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin: 0 10px;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+
+main {
+    margin-top: 150px;
+    background-color: cadetblue;
+}
+
+footer {
+    background-color: orange;
+}
