@@ -9,8 +9,8 @@ ul {
 }
 
 li {
-    /* display: inline-block; */
-    float: left;
+    display: inline-block;
+    /* float: left; */
 
     border: 1px solid darkred;
     background-color: black;
@@ -31,17 +31,29 @@ li:active {
     background-color: rebeccapurple;
 }
 
+.dropdown {
+    position: relative;
+}
+
 li ul {
     padding: 0;
-    position: relative;
-    top: 5px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
 
     display: none;
+
+    box-sizing: border-box;
+
+    border: 1px solid darkred;
 }
 
 
 li ul li {
     float: none;
+    display: block;
+    padding: 10px;
 }
 
 li:hover ul {
