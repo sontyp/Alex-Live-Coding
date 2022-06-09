@@ -1,0 +1,83 @@
+:root {
+    font-size: 16pt;
+}
+
+header {
+    /* width: 1300px; */
+    width: 100vw;
+    height: 200px;
+    background-color: red;
+}
+nav {
+    /* width: 10vw; */
+    width: 20%;
+    height: 15vh;
+    background-color: aqua; 
+    margin: 0 auto;
+
+}
+
+main {
+    /* width: 1300px; */
+    width: 100vw;
+    height: 200px;
+    background-color: green;
+}
+main section {
+    width: 10vw;
+    height: 15vh;
+    background-color: blueviolet; 
+}
+
+
+footer {
+    /* width: 1300px; */
+    width: 100vw;
+    /* height: 200px; */
+    height: 20vh;
+    background-color: blue;
+    padding: 2vh;
+}
+footer > section {
+    width: 10vw;
+    height: 15vh;
+    background-color: beige; 
+}
+
+
+/*--------------------- Font sizes -------------------------- */
+header nav span {
+    font-size: 50px;
+}
+
+main > span {
+    font-size: 18pt;
+}
+
+main section {
+    font-size: 18pt;
+}
+
+main section > span {
+    /* font-size: 0.5em; */
+    font-size: 50%;
+}
+
+
+footer section > span {
+    font-size: 2rem;
+}
+
+#footer-box {
+    background-color: aliceblue;
+    width: fit-content;
+    margin: 5vh auto;
+}
+
+#footer-box h5 {
+    text-align: start;
+}
+
+h5 {
+    text-align: center;
+}

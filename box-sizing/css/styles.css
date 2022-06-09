@@ -1,0 +1,74 @@
+/* 
+    If we define that for all elements,
+    we don't have to hastle with it on individual
+    boxes or classes
+*/
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+
+/* 
+    Define properties for all boxes 
+    with class 'box'.
+*/
+.box {
+    /* box-sizing: content-box; */
+    /* 
+        Set the box-sizing for this class to
+        'border-box' so they all keep the same size
+     */
+    box-sizing: border-box; 
+    width: 200px;
+    height: 200px;
+    background-color: cornflowerblue;
+    border: solid 3px black;
+}
+
+
+/* 
+    Define individual properties for the box 
+    with id 'box-2'.
+*/
+#box-2 {
+    /* width = 200px + 2*20px = 240px */
+    padding: 20px;
+   
+/* 
+    When not using the 'border-box' box-sizing
+    we have to adjust the box dimensions in order
+    to maintain the same box size.
+*/
+/* 
+    width: 160px;
+    height: 160px;
+ */
+}
+
+
+
+/* ----------------- Some asthetic tunes ------------ */
+h1, h2, h3 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.first-grade-heading {
+    text-transform: uppercase;
+    text-decoration: overline underline;
+    color: darkslategray;
+    text-align: center;
+}
+
+main {
+    width: 70%;
+    background-color: lightgray;
+    margin: 0 auto;
+}
+
+.box-header {
+    text-align: center;
+}
+
+.box {
+    margin: 0 auto;
+}

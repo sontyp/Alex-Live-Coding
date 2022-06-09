@@ -1,0 +1,29 @@
+
+/* speficity 1*10.000 0*1000 + 0*100 + 0*10 + 1*1 = 10.001 */
+/* Use with caution (or better not at all) */
+/*
+h1 {
+    color: darkgoldenrod !important;
+}
+*/
+
+/* speficity 0*1000 + 1*100 + 0*10 + 1*1 = 101 */
+h1#main-header-1 {
+    color: coral;
+}
+
+/* speficity 0*1000 + 1*100 + 0*10 + 0*1 = 100 */
+#main-header-1 {
+    color: blue;
+}
+
+/* speficity 0*1000 + 0*100 + 1*10 + 0*1 = 10 */
+.header-1 {
+    color: red;
+}
+
+/* speficity 0*1000 + 0*100 + 0*10 + 1*1 = 1 */
+h1 {
+    color: green;
+}
+

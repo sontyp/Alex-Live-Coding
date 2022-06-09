@@ -1,0 +1,36 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-image: url(/img/alyx_parallax_1.jpg);
+    background-attachment: fixed;
+    height: 350vh;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    font-size: 32pt;
+}
+
+dl {
+    width: 50vw;
+    margin: 0 auto;
+    height: 100%;
+}
+
+dt {
+    height: 20px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    margin: 1em 0;
+}
