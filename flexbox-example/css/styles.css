@@ -1,0 +1,52 @@
+
+/* Margin und Padding der Haupt HTML Elemente zurücksetzen */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-size: 16pt;
+}
+
+
+.container {
+    background-color: aquamarine;
+    height: 100vh;
+
+
+    /* Aktiviere Flexbox für den Inhalt des Container-Divs */
+    display: flex;
+
+    /* Flex-Richtung festgelegt */
+    flex-direction: row;
+
+    /* Zeilen Umbruchsverhalten für Flex-Elemente gesetzt */
+    flex-wrap: nowrap;
+
+    /* Flex-Ausrichtung auf Hauptachse (Horizontal) festgelegt */
+    justify-content: center;
+
+    /* Flex-Ausrichtung auf Querachse für alle Elemente festgelegt */
+    align-items: center;
+
+    /* 
+        NUR BEI Flex-Wrap: wrap(-reverse) 
+        Richtet die Zeilen im Flexbereich aus.
+    */
+    /* align-content: center; */
+
+}
+
+
+section {
+    background-color: blueviolet;
+    border: 2px solid black;
+
+    flex-basis: 200px;
+}
+
+#section-1 {
+    
+}
