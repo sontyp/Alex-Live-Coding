@@ -23,10 +23,10 @@ body {
     flex-direction: row;
 
     /* Zeilen Umbruchsverhalten für Flex-Elemente gesetzt */
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 
     /* Flex-Ausrichtung auf Hauptachse (Horizontal) festgelegt */
-    justify-content: center;
+    justify-content: space-evenly;
 
     /* Flex-Ausrichtung auf Querachse für alle Elemente festgelegt */
     align-items: center;
@@ -45,8 +45,23 @@ section {
     border: 2px solid black;
 
     flex-basis: 200px;
+    
 }
 
 #section-1 {
-    
+    /* flex-grow: 5; */
+}
+
+#section-2 {
+    background-color: blue;
+
+    flex-shrink: 2;
+}
+
+#section-3 {
+    background-color: orange;
+}
+
+#section-4 {
+    background-color: red;
 }
