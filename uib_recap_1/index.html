@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alex">
+    <meta name="description" content="Wiederholung von UIB 1">
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <title>UIB I Wiederholung</title>
+</head>
+
+
+<body>
+    <header></header>    
+    <main>
+        <h2 class="topic-heading" id="selector-topic-heading">Selektoren</h2>
+        <p>
+            Selektoren spielen eine wichtige Rolle in CSS. Ohne diese wäre nicht möglich genau zu spezifizieren, welches Element wir denn nun stylen möchten.
+            <span>Das ist ein Span.</span>
+        </p>
+        <span id="first-span-child">Ich bin ein direktes Kind von MAIN.</span>
+        <span>Ich bin das zweite direkte Kind von MAIN.</span>
+
+        <p>
+            Das ist ein neuer Absatz, der direkt nach einem Span kommt.
+        </p>
+
+        <span>Platzhalter</span>
+        <p data-span="data">
+            Auch ich komme nach einem Span.
+            <span data-span="data">Thomas ist heute zu spät.</span>
+        </p>
+        <em data-span="data">Halli hallo</em>
+
+        <form>
+            <input type="text" name="" id="">
+            <input type="text" name="" id="">
+            <input type="text" name="" id="">
+            <input type="password" name="" id="">
+            <input type="email" name="" id="">
+        </form>
+
+
+        <h2>Position: fixed vs Position: sticky</h2>
+        <div class="fixed-div">Ich bin gefixt.</div>
+        <div class="sticky-div">Ich bin sehr sticky.</div>
+        
+        <h3>Z-Index</h3>
+
+
+        <h2>Pseudo-classes vs Pseudo-elements</h2>
+        <span class="pseudo" id="span-hover">Bitte hovern für meine hover-Pseudo-Klasse</span>
+        <span class="pseudo" id="span-before">&dHar;Ich habe ein before-pseudo-element</span>
+        <span class="pseudo" id="span-after">Ich habe ein after-pseudo-element</span>
+
+    </main>
+    <footer></footer>
+</body>
+
+</html>

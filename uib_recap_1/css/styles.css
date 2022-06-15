@@ -1,0 +1,121 @@
+body {
+    height: 200vh;
+}
+
+main {
+    height: inherit;
+}
+
+
+
+/* Der Element-Selektor */
+h2 {
+    color: red;
+}
+
+/* Der Klassen-Selektor */
+.topic-heading {
+    font-size: 24pt;
+}
+
+/* Der ID-Selektor */
+#selector-topic-heading {
+    text-transform: uppercase;
+}
+
+/* Der Pseudo-Klassen-Selektor */
+h2:hover {
+    transform: translateX(2em);
+}
+
+/* Der additive Selektor */
+h2, p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Der "Jedes-Kind"-Selektor */
+main span {
+    background-color: brown;
+    color: white;
+}
+
+/* Der "Direktes-Kind"-Selektor */
+main > span {
+    border: 5px solid green;
+    color: yellow;
+}
+
+/* Der "Nächste-Schwester"-Selektor */
+#first-span-child + span {
+    background-color: blueviolet;
+}
+
+p + span {
+    font-size: 18pt;
+}
+
+
+/* Der "Voheriger-Nachbar"-Selektor */
+span ~ p {
+    background-color: cadetblue;
+}
+
+
+/* Der Attribut-Selektor */
+[data-span] {
+    border: 5px dotted red;
+}
+
+[type=text] {
+    color: pink;
+    outline-color: red;
+}
+
+
+
+
+.fixed-div {
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    position: fixed;
+    right: 0;
+}
+
+.sticky-div {
+    background-color: coral;
+    height: 100px;
+    width: 100px;
+    position: sticky;
+    top: 10vh;
+
+    z-index: auto;
+}
+
+h3 {
+    z-index: auto;
+}
+
+
+.pseudo {
+    display: block;
+    margin-top: 10px;
+    width: fit-content;
+}
+
+/* Pseudo-Klasse: hover */
+#span-hover:hover {
+    border-color: red;
+}
+
+/* Pseudo-Element: before */
+#span-before::before {
+    content: '\2115';
+    border: 5px dashed blue;
+}
+
+/* Pseudo-Element: after */
+#span-after::after {
+    content: '\2115';
+    border: 5px dashed red;
+}
