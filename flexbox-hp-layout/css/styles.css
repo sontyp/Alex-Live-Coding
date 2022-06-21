@@ -1,0 +1,75 @@
+
+/* Einbinden des Fonts via CSS -> Hält das HTML sauber */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Aktivieren der Schriftart für den gesamten Body */
+    font-family: 'Roboto', sans-serif;
+
+    background-image: url(/img/nice-club.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100vh;
+}
+
+header {
+    box-sizing: border-box;
+    background-color: rgba(255, 0, 0, 0.35);
+    margin: 0;
+    height: 10vh;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+main {
+    height: 90vh;
+}
+
+
+main > h1 {
+    text-align: center;
+    color: chartreuse;
+}
+
+
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 50%;
+    height: 100%;
+}
+
+section > h2 {
+    text-align: center;
+    color: chartreuse;
+    width: fit-content;
+
+    /* Schrift rotieren */
+    transform: rotate(-3600deg);
+
+    transition: all 2s;
+}
+
+section > h2:hover {
+    transform: rotate(3600deg);
+
+    transition: all 5s;
+}
+
+section > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
