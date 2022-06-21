@@ -1,0 +1,23 @@
+
+.container {
+    display: flex;
+}
+
+.flex-child {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+
+    box-sizing: border-box; /* Border wird mit eingerechnet */
+    border: 2px solid black;
+    color: white;
+    font-size: 18pt;
+}
+
+#child-1 {
+    order: 3;
+}
+
+#child-4 {
+    order: -1;
+}
