@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neumorphic Player</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://kit.fontawesome.com/0b5035b273.js" crossorigin="anonymous"></script> 
+</head>
+
+<body>
+    <!-- Der aeusserste Container -->
+    <div id="player-container">
+
+        <!-- Container fuer obere Zeile -->
+        <div id="header-container">
+            <!-- Suchbutton -->
+            <div class="button" id="search-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <!-- Playlist Name -->
+            <span id="playlist-span">My Playlist</span>
+
+            <!-- Power Button -->
+            <div class="button" id="power-button">
+                <i class="fa-solid fa-power-off"></i>
+            </div>
+        </div>
+
+        <!-- Mittlerer Container fuer Song Information -->
+        <div id="song-info-container">
+            <!-- Albumcover -->
+            <div id="album-cover">
+                <img src="/assets/track-image.jpeg" alt="Preview des Albumcovers">
+            </div>
+
+            <!-- Songname -->
+            <span id="titel-span">Songname</span>
+
+            <!-- Kuenstlername -->
+            <span id="artist-span">Kuenstlername</span>
+        </div>
+
+        <!-- Unterer Container fuer Bedienelemente -->
+        <div id="controls-container">
+            <!-- Zeitstrahl -->
+            <div id="progress-bar">
+            </div>
+
+            <!-- Bedienungsbuttons -->
+            <div id="song-replay-container">
+                <!-- Zurueckbutton -->
+                <div class="button" id="backward-button">
+                    <i class="fa-solid fa-backward-fast"></i>
+                </div>
+
+                <!-- Playbutton -->
+                <div class="button" id="play-button">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+
+                <!-- Vorbutton -->
+                <div class="button" id="forward-button">
+                    <i class="fa-solid fa-forward-fast"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Unterster Container fuer Footer -->
+        <div id="footer-container">
+            <!-- Grauer Farbverlauf -->
+        </div>
+    </div>
+</body>
+
+</html>
