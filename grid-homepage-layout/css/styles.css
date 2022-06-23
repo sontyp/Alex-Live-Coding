@@ -1,0 +1,81 @@
+
+.container {
+    height: 100vh;
+    display: grid;
+
+    /* Definiere das Raster */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+header {
+    background-color: blue;
+
+    /* Header ueber alle Spalten des Rasters strecken */
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    /* Header in erste Zeile des Rasters */
+    grid-row: 1;
+}
+
+aside {
+    background-color: crimson;
+
+    /* Definiere Spaltenposition im Raster (Nur Spalte 1) */
+    grid-column: 1;
+
+    /* Definiere Zeilenposition im Raster (Zeilen 2-4) */
+    grid-row: 2 / 5;
+}
+
+main {
+    background-color: cadetblue;
+
+    /* Definiere Spaltenposition im Raster (Spalten 2-4) */
+    grid-column: 2 / 5;
+
+    /* Definiere Zeilenposition im Raster (Zeilen 2-3) */
+    grid-row: 2 / 4;
+}
+
+footer {
+    background-color: darkgreen;
+
+    /* Definiere Spaltenposition im Raster (Spalten 1-4) */
+    grid-column: 1 / 5;
+
+    /* Definiere Zeilenposition im Raster (Nur Zeile 5) */
+    grid-row: 5;
+}
+
+
+#section-1 {
+    background-color: burlywood;
+
+    /* Definiere Spaltenposition im Raster (Nur Spalte 2) */
+    grid-column: 2;
+
+    /* Definiere Zeilenposition im Raster (Nur Zeile 4) */
+    grid-row: 4
+}
+
+#section-2 {
+    background-color: blueviolet;
+
+    /* Definiere Spaltenposition im Raster (Nur Spalte 3) */
+    grid-column: 3;
+
+    /* Definiere Zeilenposition im Raster (Nur Zeile 4) */
+    grid-row: 4
+}
+
+#section-3 {
+    background-color: darkgoldenrod;
+
+    /* Definiere Spaltenposition im Raster (Nur Spalte 4) */
+    grid-column: 4;
+
+    /* Definiere Zeilenposition im Raster (Nur Zeile 4) */
+    grid-row: 4
+}
