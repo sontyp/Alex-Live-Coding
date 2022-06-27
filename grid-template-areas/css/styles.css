@@ -1,0 +1,80 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    height: 100vh;
+
+    display: grid;
+/*     
+    grid-template-rows: 50px repeat(3, 1fr) 50px;
+    grid-template-columns: repeat(3, 1fr);
+ */
+    gap: 0.2em;
+
+    grid-template-areas: 
+        "kopfzeile kopfzeile kopfzeile"
+        "navigation artikel seitenbereich"
+        "navigation artikel seitenbereich"
+        "werbesektion artikel seitenbereich"
+        "fusszeile fusszeile fusszeile";
+}
+
+header {
+    grid-area: kopfzeile;
+
+    background-color: blue;
+}
+
+nav {
+    grid-area: navigation;
+
+    background-color: coral;
+}
+
+article {
+    grid-area: artikel;
+
+    background-color: tomato;
+}
+
+aside {
+    grid-area: seitenbereich;
+
+    background-color: green;
+}
+
+section {
+    grid-area: werbesektion;
+
+    background-color: blueviolet;
+}
+
+footer {
+    grid-area: fusszeile;
+
+    background-color: darkcyan;
+}
+
+
+/* Tablet */
+@media all and (max-width: 50em) {
+    body {
+        grid-template-areas: 
+          "kopfzeile kopfzeile" 
+          "navigation navigation" 
+          "seitenbereich artikel" 
+          "werbesektion artikel"
+          "fusszeile fusszeile";
+        grid-template-columns: 1fr 4fr;
+      }
+}
+
+/* Handy */
+@media all and (max-width: 30em) {
+    body {    
+      display: block;
+    }
+  }
