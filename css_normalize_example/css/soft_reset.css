@@ -7,3 +7,16 @@
     box-sizing: border-box;
 }
 
+/* Zuruecksetzen der Schriftgroesse auf 62.5% == 10px */
+html {
+    font-size: 62.5%;
+}
+
+/* Schriftgroessen anhand von root-Schriftgroesse hochskalieren */
+body {
+    font-size: 1.6rem;
+}
+h1 {
+    font-size: 4.8rem;
+}
+
