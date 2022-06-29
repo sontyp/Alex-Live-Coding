@@ -1,0 +1,8 @@
+
+/* normalize.css im eigenen CSS importieren (im Zweifel langsamer beim Laden der Page) */
+/* @import url(/css/normalize.css); */
+
+
+body {
+    padding-inline: 30%;
+}

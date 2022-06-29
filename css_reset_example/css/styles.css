@@ -1,0 +1,21 @@
+/* reset.css am Anfang unserer eigenen CSS importieren */
+/* @import url(/css/reset.css); */
+
+
+:root {
+    font-size: 62.5%; /* ca. 10px */
+}
+
+h1 {
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+body {
+    padding: 3rem;
+}
