@@ -1,0 +1,194 @@
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+h1 {
+    font-size: 4.8rem;
+}
+body {
+    font-size: 1.6rem;
+}
+
+
+
+#desktop {
+    width: 80vw;
+    height: 60vh;
+
+    margin: 0 auto;
+
+    background-color: blue;
+}
+
+#small-desktop {
+    width: 60vw;
+    height: 30vh;
+
+    margin: 0 auto;
+
+    background-color: blueviolet;
+}
+
+#tablet {
+    width: 40vw;
+    height: 20vh;
+
+    margin: 0 auto;
+
+    background-color: orange;
+}
+
+#smartphone {
+    width: 20vw;
+    height: 20vh;
+
+    margin: 0 auto;
+
+    background-color: red;
+}
+
+#print-div {
+    width: 50%;
+    height: 50%;
+
+    margin: 0 auto;
+
+    background-color: darkgray;
+
+    display: none;
+}
+
+
+#container {
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+
+    grid-template-areas: 
+        "header         header  header"
+        "aside          main    section-right"
+        "section-left   main    section-right"
+        "footer         footer  footer";
+    
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+header {
+    background-color: blueviolet;
+
+    grid-area: header;
+}
+
+aside {
+    background-color: blue;
+
+    grid-area: aside;
+}
+
+main {
+    background-color: yellow;
+
+    grid-area: main;
+}
+
+#section-right {
+    background-color: orange;
+
+    grid-area: section-right;
+}
+
+#section-left {
+    background-color: orangered;
+
+    grid-area: section-left;
+}
+
+footer {
+    background-color: red;
+
+    grid-area: footer;
+}
+
+
+/* desktop */
+@media screen and (min-width: 1280px) {
+    #desktop {
+        display: block;
+    }
+
+    #small-desktop,
+    #tablet,
+    #smartphone {
+        display: none;
+    }
+}
+
+/* small desktop (769px - 1279px) */
+@media screen and (min-width: 769px) and (max-width: 1279px) {
+    #small-desktop {
+        display: block;
+    }
+
+    #desktop,
+    #tablet,
+    #smartphone {
+        display: none;
+    }
+}
+
+/* tablet (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    #tablet {
+        display: block;
+    }
+
+    #desktop,
+    #small-desktop,
+    #smartphone {
+        display: none;
+    }
+
+    #container {
+        grid-template-areas: 
+        "header         header"
+        "aside          main"
+        "section-left   section-right"
+        "footer         footer";
+    
+        grid-template-columns: repeat(2, 4fr);
+        /* grid-template-rows: repeat(4, 1fr); */
+    }
+}
+
+/* smartphone (0px - 480px) */
+@media screen and (max-width: 480px) {
+    #smartphone {
+        display: block;
+    }
+
+    #desktop,
+    #small-desktop,
+    #tablet {
+        display: none;
+    }
+
+    #container {
+        display: block;
+    }
+}
+
+/* Print Regel: Wird nur angezeigt, wenn gedruckt wird */
+@media print {
+    #print-div {
+        display: block;
+    }
+}
