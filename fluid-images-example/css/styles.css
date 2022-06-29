@@ -1,0 +1,10 @@
+
+picture {
+    margin: 0 auto;
+    width: 100vw;
+}
+
+
+picture > img {
+    /* width: 100%; */
+}

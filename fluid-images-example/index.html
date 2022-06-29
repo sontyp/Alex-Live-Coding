@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid-Images</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <h1>Magst du auch Bäume?</h1>
+    <picture>
+        <!-- Smartphone -->
+        <source media="(max-width: 480px)" srcset="/images/three-trees_150.webp">
+
+        <!-- Tablet -->
+        <source media="(max-width: 768px)" srcset="/images/three-trees_500.webp">
+        
+        <!-- Fallback -->
+        <img src="/images/three-trees.webp" alt="Eine grafische Abbildung von drei Bäumen">
+    </picture>
+</body>
+</html>
