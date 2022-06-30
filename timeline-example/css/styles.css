@@ -1,0 +1,48 @@
+
+
+#timeline-container {
+    width: 60vw;
+    background-color: #efefef;
+    margin: 0 auto;
+}
+
+#timeline {
+    width: 30vw;
+    border-right: 1px rgb(168, 167, 167) solid;
+}
+
+
+.timestamp {
+    width: 20vw;
+    height: 20vh;
+
+    margin: 0 auto;
+
+    border: 1px solid black;
+    border-radius: 5%;
+    box-sizing: border-box;
+}
+
+.timestamp-left {
+    border-color: coral;
+}
+
+.timestamp-left::after {
+    content: " ";
+    background-color: coral;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+
+    position: relative;
+    left: 121.5%;
+}
+
+
+.timestamp-right {
+    border-color: cornflowerblue;
+
+    position: relative;
+    left: 100%;
+}
