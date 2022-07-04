@@ -1,0 +1,45 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 32pt;
+}
+
+table {
+    border-collapse: collapse;
+    border-radius: 0.5em;
+    width: 75%;
+    /* border: 1px solid black; */
+
+    background-color: rgb(224, 224, 224);
+    overflow: hidden;
+
+    margin: 0 auto;
+}
+th {
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 0.2em;
+}
+
+.marked-warning {
+    background-color: rgba(253, 124, 124, 0.781);
+    font-weight: 700;
+}
+
+.table-section {
+    border: 1px solid black;
+
+}
+
+/* Zebramuster Einfaerbung der Zeilen */
+tbody tr:nth-child(even) {
+    background-color: rgb(182, 181, 181);
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alexander Babel">
+    <meta name="description" content="Ein Beispiel fuer HTML Tabellen und ihr Styling">
+    <title>Tabellen Beispiel</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <table>
+        <caption>Tabelle fuer Groessen von Haustieren</caption>
+
+        <thead>
+            <!-- Kopfzeile -->
+            <tr>
+                <th>Art des Tieres</th>
+                <th>Groesse</th>
+                <th>Beliebtheit</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- Erste Daten Zeile -->
+            <tr>
+                <td>Hund</td>
+                <td>Gross</td>
+                <td>Sehr beliebt</td>
+            </tr>
+
+            <!-- Zweite Daten Zeile -->
+            <tr>
+                <td>Katze</td>
+                <td>Mittelgross</td>
+                <td>Sehr beliebt</td>
+            </tr>
+
+            <!-- Dritte Daten Zeile -->
+            <tr>
+                <td>Maus</td>
+                <td>Klein</td>
+                <td class="marked-warning">Weniger beliebt</td>
+            </tr>
+
+            <tr>
+                <td>Maus</td>
+                <td>Klein</td>
+                <td class="marked-warning">Weniger beliebt</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <thead>
+            <!-- Extra als Platzhalter freigelassen -->
+            <th></th>
+
+            <th>Januar</th>
+            <th>Februar</th>
+            <th>Maerz</th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th>Totales Einkommen</th>
+                <td>€10.000</td>
+                <td>€15.000</td>
+                <td>€7.000</td>
+            </tr>
+            <tr>
+                <th>Abzuege</th>
+                <td>€200</td>
+                <td>€300</td>
+                <td>€50</td>
+            </tr>
+            <tr>
+                <th>Netto Einkommen</th>
+                <td>€9.800</td>
+                <td>€14.700</td>
+                <td>€6.950</td>
+            </tr>
+        </tbody>
+        <caption>Finanzaufstellung erstes Quartal</caption>
+    </table>
+</body>
+</html>
