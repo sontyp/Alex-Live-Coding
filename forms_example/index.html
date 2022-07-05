@@ -19,67 +19,87 @@
     <main>
         <section id="form-section">
             <form>
-                <!-- Label fuer Texteingabefeld mit der ID "name-input" -->
-                <label for="name-input">Dein Name</label>
-                <!-- Texteingabefeld mit Platzhalter "Dein Name" -->
-                <input type="text" id="name-input" placeholder="Dein Name">
-
-                <!-- Label fuer Zahleingabefeld mit der ID "age-input" -->
-                <label for="age-input">Dein Alter</label>
-                <!-- Zahleingabefeld mit Platzhalter "Dein Alter" und Mindestwert 1 -->
-                <input type="number" min="1" placeholder="Dein Alter" id="age-input">
-
-                <!-- Auswahlfeld mit Autovervollstaendigung. Kann auch mit eigenem Wert befuellt werden. -->
-                <input list="gender" placeholder="Dein Geschlecht">
-                <!-- Liste der Wahloptionen -->
-                <datalist id="gender">
-                    <option value="w">Weiblich</option>
-                    <option value="d">Divers</option>
-                    <option value="m">Maennlich</option>
-                    <option value="super">Geil</option>
-                </datalist>
-
-                <!-- Label fuer Zeitauswahlfeld -->
-                <label for="time-input">Lieblings Uhrzeit</label>
-                <!-- Auswahlfeld fuer Uhrzeiten. Kann auch mit eigenem Wert befuellt werden. -->
-                <!-- ACHTUNG: Zeitformat abhaengig von Sprache des Betriebssystems -->
-                <input type="time" list="favorite-time" id="time-input">
-                <datalist id="favorite-time">
-                    <option value="06:00"></option>
-                    <option value="08:00"></option>
-                    <option value="10:00"></option>
-                    <option value="12:00"></option>
-                    <option value="20:00"></option>
-                </datalist>
-
-                <!-- Auswahlfeld mit festen Wahloptionen. -->
-                <!-- ACHTUNG: Der erste Wert ist von Haus aus gewaehlt -->
-                <select id="">
-                    <option value="">Lieblings Programmiersprache</option>
-                    <option value="c-lang">C</option>
-                    <option value="js">JavaScript</option>
-                    <option value="java">Java</option>
-                    <option value="pascal">Pascal</option>
-                </select>
-
-                <!-- label fuer Schieberegler -->
-                <label for="coolness-factor-input">Dein Coolness Faktor</label>
+                <!-- 
+                    Label und Input in einem Fieldset.
+                    Verpackt diese semantisch wie ein Div
+                -->
+                <fieldset id="name-fieldset">
+                    <!-- Label fuer Texteingabefeld mit der ID "name-input" -->
+                    <label for="name-input">Dein Name</label>
+                    <!-- Texteingabefeld mit Platzhalter "Dein Name" -->
+                    <input type="text" id="name-input" placeholder="Dein Name">
+                </fieldset>
                 
-                <!-- Schiebereglereingabe mit auswaehlbaren Werten. Kann auch eigens gewaehlt werden. -->
-                <input type="range" list="coolness-factor" id="coolness-factor-input">
-                <datalist id="coolness-factor">
-                    <option value="10">Nicht cool</option>
-                    <option value="20">Nicht so cool</option>
-                    <option value="50">Gar nicht mal so uncool</option>
-                    <option value="80">Ziemlich cool</option>
-                    <option value="100">Obermegasuperduper cool</option>
-                </datalist>
+                <fieldset>
+                    <!-- Label fuer Zahleingabefeld mit der ID "age-input" -->
+                    <label for="age-input">Dein Alter</label>
+                    <!-- Zahleingabefeld mit Platzhalter "Dein Alter" und Mindestwert 1 -->
+                    <input type="number" min="1" placeholder="Dein Alter" id="age-input">
+                </fieldset>
+                
+                <fieldset>
+                    <label for="gender-input">Dein Geschlecht</label>
+                    <!-- Auswahlfeld mit Autovervollstaendigung. Kann auch mit eigenem Wert befuellt werden. -->
+                    <input list="gender" placeholder="Dein Geschlecht" id="gender-input">
+                    <!-- Liste der Wahloptionen -->
+                    <datalist id="gender">
+                        <option value="w">Weiblich</option>
+                        <option value="d">Divers</option>
+                        <option value="m">Maennlich</option>
+                        <option value="super">Geil</option>
+                    </datalist>
+                </fieldset>
+                
 
-                <!-- Input in Label schachteln spart for Attribut -->
-                <label>Magst du Erbsen?
-                    <!-- Anhake Kaestchen; kennt zwei werte: Ja oder Nein -->
-                    <input type="checkbox" name="peas">
-                </label>
+                <fieldset>
+                    <!-- Label fuer Zeitauswahlfeld -->
+                    <label for="time-input">Lieblings Uhrzeit</label>
+                    <!-- Auswahlfeld fuer Uhrzeiten. Kann auch mit eigenem Wert befuellt werden. -->
+                    <!-- ACHTUNG: Zeitformat abhaengig von Sprache des Betriebssystems -->
+                    <input type="time" list="favorite-time" id="time-input">
+                    <datalist id="favorite-time">
+                        <option value="06:00"></option>
+                        <option value="08:00"></option>
+                        <option value="10:00"></option>
+                        <option value="12:00"></option>
+                        <option value="20:00"></option>
+                    </datalist>
+                </fieldset>
+
+                <fieldset>
+                    <!-- Auswahlfeld mit festen Wahloptionen. -->
+                    <!-- ACHTUNG: Der erste Wert ist von Haus aus gewaehlt -->
+                    <select id="">
+                        <option value="">Lieblings Programmiersprache</option>
+                        <option value="c-lang">C</option>
+                        <option value="js">JavaScript</option>
+                        <option value="java">Java</option>
+                        <option value="pascal">Pascal</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <!-- label fuer Schieberegler -->
+                    <label for="coolness-factor-input">Dein Coolness Faktor</label>
+                    <!-- Schiebereglereingabe mit auswaehlbaren Werten. Kann auch eigens gewaehlt werden. -->
+                    <input type="range" list="coolness-factor" id="coolness-factor-input">
+                    <datalist id="coolness-factor">
+                        <option value="10">Nicht cool</option>
+                        <option value="20">Nicht so cool</option>
+                        <option value="50">Gar nicht mal so uncool</option>
+                        <option value="80">Ziemlich cool</option>
+                        <option value="100">Obermegasuperduper cool</option>
+                    </datalist>
+
+                    <!-- Input in Label schachteln spart for Attribut -->
+                    <label>Magst du Erbsen?
+                        <!-- Anhake Kaestchen; kennt zwei werte: Ja oder Nein -->
+                        <input type="checkbox" name="peas">
+                    </label>
+
+                    <label for="password-input">Dein Passwort</label>
+                    <input type="password" id="password-input">
+                </fieldset>
             </form>
         </section>
     </main>
@@ -87,8 +107,8 @@
 
     <footer>
         <ul>
-            <li>Impressum</li>
-            <li>Cookie Policy</li>
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Cookie Policy</a></li>
         </ul>
     </footer>
 </body>

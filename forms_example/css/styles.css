@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+
+#name-input {
+    outline-color: red;
+    border: none;
+    border-bottom: 2px dashed green;
+
+    height: 50px;
+    font-size: 16pt;
+
+    background-color: lightblue;
+}
+
+#name-input::placeholder {
+    color: purple;
+}
+
+/* label und input untereinander anordnen */
+fieldset label, 
+fieldset input {
+    display: block;
+}
+
+
+form {
+    width: fit-content;
+    margin: 0 auto;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+fieldset {
+    border: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Lege Variable fuer header und footer Hoehe an */
+html {
+    --header-footer-height: 5vh;
+}
+
+header, footer {
+    background-color: lightblue;
+
+    /* Nutze Variable fuer header und footer Hoehe */
+    height: var(--header-footer-height);
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    display: inline-block;
+}
+
+main {
+    /* 
+        Berechne main Hoehe anhand von 
+        Variable fuer header und footer Hoehe 
+    */
+    height: calc(100vh - 2 * var(--header-footer-height));
+}
+
+section {
+    height: 100%;
+}
