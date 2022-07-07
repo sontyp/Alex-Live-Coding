@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox: align-items vs align-content</title>
+
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border: 1px solid black;
+        }
+
+        body {
+            width: 250px;
+            height: 100vh;
+            
+            display: flex;
+            flex-wrap: wrap;
+
+            /* Zeilenausrichtung entlang der Querachse */
+            align-content: space-between;
+
+            /* Itemausrichtung entlang der Querachse innerhalb der Zeile */
+            align-items: center;
+        }
+
+
+        .small-item {
+            height: 50px;
+        }
+    </style>
+
+</head>
+<body>
+    <div>1</div>
+    <div class="small-item">2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+</body>
+</html>
