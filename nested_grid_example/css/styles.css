@@ -1,0 +1,87 @@
+/* Kleines CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+    Definiere body als aeusseres Grid mit 2 Spalten 
+    und drei Zeilen
+*/
+body {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "main   main-sidebar"
+        "footer footer";
+
+    grid-template-columns: 10fr 2fr;
+    grid-template-rows: 5vh 90vh 5vh;
+}
+
+/* Weise header den "header"-Bereich im Grid zu */
+header {
+    grid-area: header;
+
+    background-color: teal;
+    color: white;
+}
+
+/* ---------------- MAIN BEREICH ---------------- */
+/* Weise main den "main"-Bereich im Grid zu */
+main {
+    grid-area: main;
+
+    /* Weise main inneres Grid zu */
+    display: grid;
+    grid-template-areas: 
+        "top-section    top-section"
+        "inner-sidebar  mid-section"
+        "inner-sidebar  bot-section";
+
+    grid-template-columns: 1fr 11fr;
+}
+
+/* Oberste Section */
+main > section:first-of-type {
+    grid-area: top-section;
+}
+
+/* Mittlere Section */
+main > section:nth-of-type(2) {
+    grid-area: mid-section;
+
+    background-color: #f7c7c7;
+}
+
+/* Unterste Section */
+main > section:last-of-type {
+    grid-area: bot-section;
+}
+
+/* Inneres Seitenmenue */
+main > aside {
+    grid-area: inner-sidebar;
+
+    background-color: lightgrey;
+}
+/* --------------------------------------------- */
+
+/* 
+    Weise aside im Hauptgrid den 
+    "main-sidebar"-Bereich im Grid zu.
+*/
+body > aside {
+    grid-area: main-sidebar;
+
+    background-color: darkgray;
+}
+
+/* Weise footer den "footer"-Bereich im Grid zu */
+footer {
+    grid-area: footer;
+
+    background-color: teal;
+    color: white;
+}
