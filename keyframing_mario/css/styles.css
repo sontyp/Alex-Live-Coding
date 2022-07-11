@@ -1,0 +1,109 @@
+/* Kleines CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Horizont mit Hintergrund versehen und dimensionieren */
+#horizon {
+    width: 100%;
+    height: 40vh;
+
+    background-image: url(../img/grassy-horizon.svg);
+    background-repeat: repeat-x;
+}
+
+/* 
+    Wolke am Horizont dimensionieren und platzieren.
+    Fuege Wolkenanimation hinzu.
+    Linearer Ablauf von 3 Sekunden und verbleibt an Endposition.
+*/
+#horizon img {
+    height: 20%;
+    position: relative;
+    top: 10%;
+    right: 0;
+
+    animation-name: cloud-flies-by;
+    animation-timing-function: linear;
+    animation-duration: 9s;
+    animation-fill-mode: forwards;
+}
+
+/* Strasse faerben und dimensionieren */
+#road {
+    width: 100%;
+    height: 60vh;
+    background-color: dimgray;
+    border-top: 10px solid grey;
+    border-bottom: 15px solid grey;
+
+    overflow-x: hidden;
+}
+
+/* Spurtrennlinie stylen (Gestrichelte weisse Linie) */
+.road-lines {
+    height: 0;
+    width: 100%;
+    border-top: 10px dashed #fff;
+
+    position: relative;
+    top: 20%;
+}
+
+/* 
+    Positioniere Mario auf dem Asphalt (10% tiefer als normal)
+    Fuege Renn Animation hinzu mit kubischem Ablauf von 9 Sekunden.
+    Lasse Position gleich nach Animationsablauf.
+*/
+#img-mario {
+    position: relative;
+    top: 10%;
+
+    animation-name: race-animation;
+    animation-duration: 9s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0, 0.93, 0.49, 0.03);
+    animation-iteration-count: 1;
+}
+
+/* 
+    Positioniere Luigi auf dem Asphalt (15% tiefer als normal)
+    Fuege Renn Animation hinzu mit kubischem Ablauf von 9 Sekunden.
+    Lasse Position gleich nach Animationsablauf.
+*/
+#img-luigi {
+    position: relative;
+    top: 15%;
+
+    animation-name: race-animation;
+    animation-duration: 9s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0,1.28,1,-0.43);
+    animation-iteration-count: 1;
+}
+
+
+/* ------------------ KEYFRAMES ------------------ */
+/* Renn Animation (Faehrt von links nach rechts) */
+@keyframes race-animation {
+    from {
+        transform: translateX(-10vw);
+    }
+
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+/* Wolken Animation (fliegt von rechts nach links) */
+@keyframes cloud-flies-by {
+    from {
+        transform: translateX(90vw);
+    }
+
+    to {
+        transform: translateX(30vw);
+    }
+}
