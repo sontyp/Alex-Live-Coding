@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabindizes</title>
+
+    <style>
+        form {
+            /* Einfach nur etwas huebscher machen */
+            margin: 0 auto;
+            width: 300px;
+
+            /* Formular als Grid anlegen mit 2 Spalten und 3 Zeilen */
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        fieldset {
+            /* Einfach nur etwas huebscher machen */
+            width: fit-content;
+        }
+        button {
+            /* Einfach nur etwas huebscher machen */
+            grid-area: 3 / span 2;
+        }
+    </style>
+</head>
+<body>
+    <h1 >Hallo Tabindizes!</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, <span>adipisicing</span> elit. Laudantium veritatis possimus itaque sapiente illo fugiat quidem aut eum officia. Ex, voluptatem cum? Earum, non veniam voluptatem ea dolor alias necessitatibus!</p>
+    
+    <!-- Formular zum durchtabben -->
+    <form>
+        <fieldset id="fs-1">
+            <label for="input-1">Input-1</label>
+            <!-- Wird bei der Tabnavigation als erstes ausgewaehlt -->
+            <input type="text" id="input-1" tabindex="1">
+        </fieldset>
+
+        <fieldset id="fs-2">
+            <label for="input-2">Input-2</label>
+            <!-- Wird bei der Tabnavigation als drittes ausgewaehlt -->
+            <input type="text" id="input-2" tabindex="3">
+        </fieldset>
+
+        <fieldset id="fs-3">
+            <label for="input-3">Input-3</label>
+            <!-- Wird bei der Tabnavigation als zweites ausgewaehlt -->
+            <input type="text" id="input-3" tabindex="2">
+        </fieldset>
+
+        <fieldset id="fs-4">
+            <label for="input-4">Input-4</label>
+            <!-- Wird bei der Tabnavigation als viertes ausgewaehlt -->
+            <input type="text" id="input-4" tabindex="4">
+        </fieldset>
+
+        <!-- Wird bei der Tabnavigation von Natur aus als letztes ausgewaehlt -->
+        <button>Submit</button>
+    </form>
+</body>
+</html>
