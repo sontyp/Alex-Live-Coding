@@ -1,0 +1,112 @@
+/* ------ IMPORTS ----- */
+@use 'header';
+/* -------------------- */
+
+/* ------ VARIABLES ------- */
+$main-color: rgb(26, 23, 199);
+$base-size: 10px;
+/* ------------------------ */
+
+
+/* ---- SASS IMPORTS ---- */
+@use "sass:math";
+/* ---------------------- */
+
+/* -------- MIXINS ------- */
+@mixin taint($bg-color: green, $font-color: white) {
+    color: $font-color;
+    background-color: $bg-color;
+}
+
+/* 
+    Standard Flexbox aufsetzen mit Parametern fuer
+    Haupt- und Querachse.
+*/
+@mixin apply-flex($justify-content: center, $align-items: center) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+/* ------------------------ */
+
+/* --------- EXTENDS --------- */
+%flex-to-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* --------------------------- */
+
+
+p {
+    color: $main-color;
+}
+
+/* a blue square */
+div {
+    background-color: $main-color;
+    width: calc(5*$base-size);
+    height: calc(5*$base-size);
+}
+
+
+/* Nav styles */
+nav {
+    background-color: aqua;
+
+    ul {
+        list-style: none;
+
+        li {
+            color: orangered;
+        }
+    }
+}
+
+
+section {
+    p {
+        &:first-child {
+            @include taint;
+        }
+
+        &:nth-child(2) {
+            @include taint(red, blue);
+        }
+    }
+}
+
+.super-div {
+    width: 500px;
+    height: 500px;
+
+    /* Wende Flexbox an */
+    /* @include apply-flex(flex-end, flex-end); */
+    @include apply-flex(flex-start, $align-items: flex-end);
+
+    .less-super-div {
+        background-color: red;
+        height: 50%;
+        width: 50%;
+    }
+}
+
+.mega-div {
+    $parent-width: 300px;
+    $parent-height: 300px;
+    background-color: black;
+    width: $parent-width;
+    height: $parent-height;
+
+    div {
+        box-sizing: border-box;
+        border: 0.2em solid white;
+        background-color: orange;
+        width: math.div($parent-width, 4) + 50px;
+        height: math.div($parent-height, 4) + 30px;
+    }
+
+    /* Erbe von %flex-to-center */
+    @extend %flex-to-center;
+    flex-direction: column;
+}

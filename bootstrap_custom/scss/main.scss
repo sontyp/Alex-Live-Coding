@@ -1,0 +1,21 @@
+/* $primary:       red; */
+
+$theme-colors: (
+  "primary":    red,
+  "secondary":  blue,
+  "success":    yellow,
+  "warning":    orange,
+  "danger":     black,
+);
+
+@import '../bootstrap/bootstrap.scss';
+
+/* REQUIRED IMPORTS */
+/* @import "../bootstrap/functions.scss"; */
+/* @import "../bootstrap/variables.scss"; */
+/* @import "../bootstrap/mixins.scss"; */
+
+/* OPTIONAL IMPORTS */
+/* @import "../bootstrap/buttons.scss"; */
+/* @import "../bootstrap/" */
+/* @import "../bootstrap/root.scss"; */
