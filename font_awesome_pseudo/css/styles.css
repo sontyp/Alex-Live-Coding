@@ -1,0 +1,46 @@
+
+
+/* 
+    Auf ::after Pseudo Element vom h1 wird die 
+    font-family von Font Awesome angewandt ("FontAwesome")
+    und als content der entsprechende Unicode eingesetzt
+*/
+h1::after {
+    font-family: "FontAwesome";
+    content: "\e13a";
+}
+
+/* 
+    Auf ::before Pseudo Element vom h1 wird die 
+    font-family von Font Awesome angewandt ("FontAwesome")
+    und als content der entsprechende Unicode eingesetzt
+*/
+h1::before {
+    font-family: "FontAwesome";
+    content: "\e13b";
+}
+
+/* 
+    Auf span Element wird die font-family 
+    von Font Awesome angewandt ("FontAwesome")
+*/
+span {
+    font-family: "FontAwesome";
+}
+
+/* 
+    In den Pseudo Elementen vom span wird 
+    als content der entsprechende Unicode eingesetzt
+*/
+span::before {
+    content: "\f386";
+}
+span::after {
+    content: "\f2db";
+}
+
+
+/* Aus Spass alles enger machen damit Kette entsteht */
+body {
+    letter-spacing: -0.3em;
+}
