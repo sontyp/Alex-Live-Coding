@@ -1,0 +1,107 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Auto-Scroll verlaueft fluessiger */
+html {
+    scroll-behavior: smooth;
+}
+
+
+main {
+    max-width: 1300px;
+    margin: 0 auto;
+
+    /* Blocksatz fuer Handy */
+    text-align: justify;
+
+    /* Innenabstand fuer Handy */
+    padding: 2em;
+}
+
+/* Sections etwas voneinander trennen */
+section {
+    margin-bottom: 2em;
+}
+
+/* Section Ueberschriften etwas abtrennen */
+section > h2 {
+    margin-bottom: 0.5em;
+}
+
+/* Textgroesse fuer handy erhoeht */
+section > p {
+    font-size: 16pt;
+}
+
+/* Fake image */
+.image {
+    width: 300px;
+    height: 200px;
+    background-color: lightgray;
+    margin: 0 auto;
+}
+
+/* Float fuer Formular entfernen */
+#contact-section {
+    clear: left;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+
+footer {
+    height: 3em;
+    background-color: darkgrey;
+}
+
+
+/* Back-To-Top Button schwebt immer recht unten mit */
+.back-to-top {
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    opacity: 0.5;
+
+    position: sticky;
+    left: 90vw;
+    bottom: 3em;
+}
+
+.back-to-top a {
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.back-to-top a:visited {
+    color: white;
+}
+
+
+/* Media Query ab Bildschirmgroessen breiter als Tablet */
+@media screen and (min-width: 769px) {
+    /* Back-To-Top Button verschwinden lassen */
+    .back-to-top {
+        display: none;
+    }
+
+    /* Fake Image von Text umfliessen lassen */
+    .image {
+        float: left;
+        margin-right: 1em;
+    }
+
+    /* Schriftgroesse etwas verkleinern fuer Desktop */
+    section > p {
+        font-size: 12pt;
+    }
+}
