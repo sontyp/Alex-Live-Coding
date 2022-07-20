@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -18,6 +22,7 @@ header {
     background-color: darkolivegreen;
 
     position: fixed;
+    z-index: 1;
 }
 
 header .header-content {
@@ -78,7 +83,7 @@ section#intro-section {
     position: sticky;
     left: 0;
     top: 0;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 section#intro-section h1 {
@@ -100,12 +105,14 @@ div.rectangled-hover-button {
 
 section#about-section {
     display: flex;
+    position: relative;
     background-color: rgb(228, 169, 169);
     color: rgb(92, 91, 91);
 }
 
-div.fake-img {
-    background-color: grey;
+section#about-section div#about-portrait {
+    background-image: url(../img/portrait_van_gogh.jpg);
+    background-size: cover;
 }
 
 div.half-wide-content {
@@ -122,12 +129,152 @@ div.text-content {
     justify-content: center;
 }
 
-div.text-content h2 {
+/* div.text-content */ h2 {
     margin-bottom: 1em;
     color: white;
 }
 
-div.text-content h3 {
+/* div.text-content */ h3 {
     font-size: 50pt;
     margin-bottom: 0.1em;
+}
+
+
+section#work-section {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(37 42 132);
+    color: rgb(228 169 169);
+}
+
+section#work-section h2 {
+    font-size: 40pt;
+}
+
+div#exhibition-grid {
+    width: 80%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+}
+
+div.exhibition-item {
+    background-color: darkgray;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+div.exhibition-item h4 {
+    font-size: 20pt;
+    font-weight: 100;
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(180, 133, 133);
+    text-align: center;
+    /* display: none; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.exhibition-item:hover h4 {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    display: none;
+}
+
+div#exhibition-grid div.exhibition-item:nth-child(1) {
+    grid-column: 1 / span 2;
+    grid-row: span 2;
+    background-image: url(../img/projects/mario.png);
+    background-size: cover;
+}
+
+
+
+div#exhibition-grid div.exhibition-item:nth-child(5) {
+    grid-row: span 2;
+    background-image: url(../img/projects/item-three.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+div#exhibition-grid div.exhibition-item:nth-child(2) {
+    background-image: url(../img/projects/chessboard.png);
+    background-size: cover;
+    background-position: center;
+}
+
+div#exhibition-grid div.exhibition-item:nth-child(3) {
+    background-image: url(../img/projects/hardcode.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+div#exhibition-grid div.exhibition-item:nth-child(4) {
+    background-image: url(../img/projects/random_number_gen.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+section#contact-section {
+    position: relative;
+    background-color: darkolivegreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 95vh;
+}
+
+section#contact-section h3 {
+    color: white;
+}
+
+
+section#contact-section p {
+    font-size: 18pt;
+    color: white;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+section#contact-section a {
+    color: white;
+}
+
+footer {
+    height: 5vh;
+    background-color: darkolivegreen;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer ul li {
+    color: white;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
 }
