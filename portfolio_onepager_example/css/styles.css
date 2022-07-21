@@ -16,6 +16,16 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+h2 {
+    margin-bottom: 1em;
+    color: white;
+}
+
+h3 {
+    font-size: 50pt;
+    margin-bottom: 0.1em;
+}
+
 
 /* -------------- HEADER -------------- */
 /* Fixed header */
@@ -111,6 +121,7 @@ section.full-size-section {
     height: 100vh;
 }
 
+/* ---------- Intro Section ---------- */
 section#intro-section {
     background-color: darkolivegreen;
     color: white;
@@ -143,11 +154,14 @@ section#intro-section a {
     color: white;
 }
 
+/* Selbstgemachter Button im Intro Bereich */
 div.rectangled-hover-button {
     border: 2px solid white;
     padding: 1.5em 1em;
 }
+/* ----------------------------------- */
 
+/* ---------- About Section ---------- */
 section#about-section {
     display: flex;
     position: relative;
@@ -155,20 +169,24 @@ section#about-section {
     color: rgb(92, 91, 91);
 }
 
+/* Alternative Ueberschrift fuer About section */
 #about-section h3#vincent-observer {
     display: none;
 }
 
+/* Vincent Van Gogh als Hintergrund im About */
 section#about-section div#about-portrait {
     background-image: url(../img/portrait_van_gogh.jpg);
     background-size: cover;
 }
 
+/* 2-Spalten Design fuer About Section */
 div.half-wide-content {
     width: 50%;
     height: 100%;
 }
 
+/* Textuelle Haelfte der About section */
 div.text-content {
     padding-left: 5em;
     padding-right: 5em;
@@ -177,18 +195,10 @@ div.text-content {
     flex-direction: column;
     justify-content: center;
 }
-
-/* div.text-content */ h2 {
-    margin-bottom: 1em;
-    color: white;
-}
-
-/* div.text-content */ h3 {
-    font-size: 50pt;
-    margin-bottom: 0.1em;
-}
+/* ----------------------------------- */
 
 
+/* ----------- Work Section ---------- */
 section#work-section {
     position: relative;
 
@@ -205,6 +215,7 @@ section#work-section h2 {
     font-size: 40pt;
 }
 
+/* Raster fuer die Work Section */
 div#exhibition-grid {
     width: 80%;
     height: 70%;
@@ -213,7 +224,6 @@ div#exhibition-grid {
     grid-template-rows: repeat(3, 1fr);
     gap: 1em;
 }
-
 div.exhibition-item {
     background-color: darkgray;
     width: 100%;
@@ -224,6 +234,7 @@ div.exhibition-item {
     align-items: flex-end;
 }
 
+/* h4 wird in voller Groesse ueber den Hintergrund gelegt */
 div.exhibition-item h4 {
     font-size: 20pt;
     font-weight: 100;
@@ -244,20 +255,12 @@ div.exhibition-item:hover h4 {
     opacity: 0;
 }
 
+/* Setze fuer die Hintergrundbilder fuer das Work Raster */
 div#exhibition-grid div.exhibition-item:nth-child(1) {
     grid-column: 1 / span 2;
     grid-row: span 2;
     background-image: url(../img/projects/mario.png);
     background-size: cover;
-}
-
-
-
-div#exhibition-grid div.exhibition-item:nth-child(5) {
-    grid-row: span 2;
-    background-image: url(../img/projects/item-three.jpeg);
-    background-size: cover;
-    background-position: center;
 }
 
 div#exhibition-grid div.exhibition-item:nth-child(2) {
@@ -279,6 +282,12 @@ div#exhibition-grid div.exhibition-item:nth-child(4) {
     background-position: center;
 }
 
+div#exhibition-grid div.exhibition-item:nth-child(5) {
+    grid-row: span 2;
+    background-image: url(../img/projects/item-three.jpeg);
+    background-size: cover;
+    background-position: center;
+}
 
 
 section#contact-section {
@@ -308,9 +317,7 @@ section#contact-section a {
     color: white;
 }
 
-
-
-
+/* Kontaktformular */
 section#contact-section #contact-form {
     padding: 1em;
     border: 2px solid white;
