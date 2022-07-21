@@ -16,7 +16,7 @@ body {
 }
 
 header {
-    width: 100%;
+    width: 100vw;
     height: 5vh;
 
     background-color: darkolivegreen;
@@ -41,7 +41,7 @@ header .header-content a {
 }
 
 .header-content nav {
-    width: 20%;
+    width: 30%;
 }
 
 .header-content nav ul {
@@ -59,6 +59,43 @@ header .header-content a {
     display: flex;
     justify-content: space-between;
 }
+
+/* BURGER MENU */
+.header-content #nav-toggle {
+    display: none;
+}
+
+.hamburger-menu {
+    width: 2em;
+    height: 1em;
+    display: none;
+}
+
+.hamburger-menu div {
+    background-color: white;
+    width: 100%;
+    height: 16.6%;
+    border-radius: 5px;
+    margin-bottom: 16.6%;
+    transition: all 0.3s ease-in-out;
+}
+
+#nav-toggle:checked + nav {
+    display: block;
+    background-color: darkolivegreen;
+}
+
+#nav-toggle:checked + nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nav-toggle:checked + nav ul li {
+    margin-bottom: 1em;
+}
+
+/* ---------- */
 
 
 section.full-size-section {
@@ -110,6 +147,10 @@ section#about-section {
     color: rgb(92, 91, 91);
 }
 
+#about-section h3#vincent-observer {
+    display: none;
+}
+
 section#about-section div#about-portrait {
     background-image: url(../img/portrait_van_gogh.jpg);
     background-size: cover;
@@ -122,7 +163,7 @@ div.half-wide-content {
 
 div.text-content {
     padding-left: 5em;
-    padding-right: 20em;
+    padding-right: 5em;
 
     display: flex;
     flex-direction: column;
@@ -183,15 +224,11 @@ div.exhibition-item h4 {
     height: 100%;
     background-color: rgb(180, 133, 133);
     text-align: center;
-    /* display: none; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 div.exhibition-item:hover h4 {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     display: none;
 }
 
@@ -259,6 +296,60 @@ section#contact-section a {
     color: white;
 }
 
+
+
+
+section#contact-section #contact-form {
+    padding: 1em;
+    border: 2px solid white;
+    border-radius: 0.5em;
+    margin-top: 1em;
+}
+
+section#contact-section #contact-form fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    margin-bottom: 0.5em;
+}
+
+section#contact-section #contact-form fieldset.horizontal-fieldset {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Abstand zwischen Label und Checkbox generieren */
+section#contact-section #contact-form fieldset.horizontal-fieldset label {
+    margin-left: 1em;
+}
+
+
+section#contact-section #contact-form fieldset label {
+    color: white;
+}
+
+section#contact-section #contact-form fieldset input {
+    width: 20em;
+    height: 2em;
+}
+
+section#contact-section #contact-form fieldset input[type="checkbox"] {
+    width: 1em;
+    height: 1em;
+}
+
+/* Textfeld fuer Nachricht nicht Groessen-verstellbar */
+section#contact-section #contact-form fieldset textarea {
+    resize: none;
+}
+
+section#contact-section #contact-form button {
+    height: 2em;
+    width: 50%;
+}
+
+
 footer {
     height: 5vh;
     background-color: darkolivegreen;
@@ -278,3 +369,66 @@ footer ul li a {
     color: white;
     text-decoration: none;
 }
+
+
+
+/* ------------- MEDIA QUERIES ------------- */
+
+/* LARGE TABLET */
+@media screen and (max-width: 900px) {
+    #about-section {
+        flex-direction: column;
+    }
+
+    #about-section h3#about-default-heading {
+        display: none;
+    }
+
+    #about-section h3#vincent-observer {
+        display: block;
+    }
+
+    #about-section div#about-portrait {
+        /* display: none; */
+    }
+
+    #about-section div.half-wide-content {
+        width: 100%;
+    }
+}
+
+/* TABLET */
+@media screen and (max-width: 768px) {
+    .header-content nav {
+        width: 50%;
+    }
+
+    section#intro-section h1 {
+        font-size: 48pt;
+    }
+
+    h3 {
+        font-size: 32pt;
+    }
+}
+
+/* LARGE PHONE */
+@media screen and (max-width: 480px) {
+    .header-content .hamburger-menu {
+        display: block;
+    }
+
+    .header-content nav {
+        display: none;
+
+        position: absolute;
+        top: 5vh;
+        left: 0;
+        width: 100%;
+    }
+
+    section#intro-section h1 {
+        font-size: 32pt;
+    }
+}
+/* ----------------------------------------- */

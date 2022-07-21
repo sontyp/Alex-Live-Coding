@@ -19,6 +19,13 @@
                 Studios
             </a>
 
+            <label for="nav-toggle" class="hamburger-menu">
+                <div class="burger-top-bun"></div>
+                <div class="burger-meat"></div>
+                <div class="burger-bottom-bun"></div>
+            </label>
+            <input id="nav-toggle" type="checkbox"></input>
+
             <nav>
                 <ul>
                     <li><a href="#about-section">About</a></li>
@@ -53,7 +60,8 @@
             </div>
             <div class="half-wide-content text-content">
                 <h2>About</h2>
-                <h3>Developer</h3>
+                <h3 id="about-default-heading">Developer</h3>
+                <h3 id="vincent-observer">Vincent is watching you</h3>
                 <p>
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, autem? Iure, fugit ex. Error minima sint quibusdam odit! Consequatur asperiores tempora eveniet, voluptate ipsum consectetur sequi animi iusto quaerat impedit!
                 </p>
@@ -100,8 +108,33 @@
                 Hit me up, then!
             </p>
             <a href="mailto:peter@pan.de">peter@pan.de</a>
+
+            <form id="contact-form">
+                <fieldset>
+                    <label for="contact-name">Your name</label>
+                    <input type="text" id="contact-name">
+                </fieldset>
+                <fieldset>
+                    <label for="contact-email">Your e-mail address</label>
+                    <input type="email" id="contact-email">
+                </fieldset>
+                <fieldset>
+                    <label for="contact-message">Your message to us</label>
+                    <textarea id="contact-message" cols="30" rows="10"></textarea>
+                </fieldset>
+
+                <fieldset class="horizontal-fieldset">
+                    <label for="contact-agree">I agree on receiving ads</label>
+                    <input type="checkbox" id="contact-agree">
+                </fieldset>
+
+                <button>Submit</button>
+            </form>
         </section>
     </main>
+
+
+
 
     <footer>
         <ul>
