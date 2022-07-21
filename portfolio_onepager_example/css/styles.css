@@ -7,6 +7,7 @@
     box-sizing: border-box;
 }
 
+/* Setze Scroll Verhalten */
 html {
     scroll-behavior: smooth;
 }
@@ -15,6 +16,9 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+
+/* -------------- HEADER -------------- */
+/* Fixed header */
 header {
     width: 100vw;
     height: 5vh;
@@ -22,9 +26,14 @@ header {
     background-color: darkolivegreen;
 
     position: fixed;
+    /* 
+        z-index auf 1 damit nicht von Folgesektion 
+        verdeckt wird
+    */
     z-index: 1;
 }
 
+/* Innerer Content Container fuer header */
 header .header-content {
     width: 80%;
     height: 100%;
@@ -40,31 +49,35 @@ header .header-content a {
     text-decoration: none;
 }
 
+/* Strecke nav etwas fuer Flexbox */
 .header-content nav {
     width: 30%;
 }
 
+/* Nav Liste via Flexbox ausrichten */
 .header-content nav ul {
     list-style: none;
-    display: flex;
 
+    display: flex;
     justify-content: space-between;
 }
 
-.header-content ul li.sublist {
+
+/* .header-content ul li.sublist {
     width: 20%;
-}
+} */
 
-.header-content ul li > ul {
+/* .header-content ul li > ul {
     display: flex;
     justify-content: space-between;
-}
+} */
 
-/* BURGER MENU */
+/* -------- BURGER MENU -------- */
+/* Checkbox als Menu Schalter */
 .header-content #nav-toggle {
     display: none;
 }
-
+/* Burger Menu mittels label mit divs drinnen */
 .hamburger-menu {
     width: 2em;
     height: 1em;
@@ -77,27 +90,22 @@ header .header-content a {
     height: 16.6%;
     border-radius: 5px;
     margin-bottom: 16.6%;
-    transition: all 0.3s ease-in-out;
 }
 
+/* Burger Menu ausfahren, wenn Checkbox gecheckt */
 #nav-toggle:checked + nav {
-    display: block;
+    /* transform: scaleY(1); */
+    max-height: 200px;
     background-color: darkolivegreen;
-}
-
-#nav-toggle:checked + nav ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 #nav-toggle:checked + nav ul li {
     margin-bottom: 1em;
 }
+/* --------------------------- */
+/* ---------------------------------- */
 
-/* ---------- */
-
-
+/* --------------------- MAIN ------------------ */
 section.full-size-section {
     width: 100%;
     height: 100vh;
@@ -227,9 +235,13 @@ div.exhibition-item h4 {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    /* Animiere hover */
+    transition: all 0.6s ease-in-out;
 }
 div.exhibition-item:hover h4 {
-    display: none;
+    /* Setze Deckkraft auf 0 */
+    opacity: 0;
 }
 
 div#exhibition-grid div.exhibition-item:nth-child(1) {
@@ -388,10 +400,6 @@ footer ul li a {
         display: block;
     }
 
-    #about-section div#about-portrait {
-        /* display: none; */
-    }
-
     #about-section div.half-wide-content {
         width: 100%;
     }
@@ -410,6 +418,25 @@ footer ul li a {
     h3 {
         font-size: 32pt;
     }
+
+    #work-section div#exhibition-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, 1fr);
+        overflow: scroll;
+    }
+
+    section#work-section h2 {
+        font-size: 22pt;
+    }
+
+    #work-section div#exhibition-grid .exhibition-item {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+
+    .exhibition-item:hover {
+        height: 50vh;
+    }
 }
 
 /* LARGE PHONE */
@@ -419,16 +446,60 @@ footer ul li a {
     }
 
     .header-content nav {
-        display: none;
+        /* display: none; */
 
         position: absolute;
         top: 5vh;
         left: 0;
         width: 100%;
+        /* transform: scaleY(0); */
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .header-content nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-content nav ul li {
+        width: 100%;
+    }
+
+    .header-content nav ul li a {
+        padding: 1em;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
     }
 
     section#intro-section h1 {
         font-size: 32pt;
+    }
+
+    footer {
+        height: auto;
+    }
+
+    footer ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    footer ul li {
+        text-align: center;
+    }
+
+    footer ul li:last-child {
+        padding: 1em;
+    }
+
+    footer ul li a {
+        padding: 1em;
+        display: inline-block;
+        width: 100%;
     }
 }
 /* ----------------------------------------- */
