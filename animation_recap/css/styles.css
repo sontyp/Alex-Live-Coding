@@ -1,0 +1,46 @@
+/* Kleines CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.sliding-div {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+
+    /* Transition Angabe fuer getriggerte Animation */
+    /* transition: all 1s linear; */
+
+    animation: roundtrip-animation 4s linear 2 alternate;
+}
+
+/* Getriggerte Animation auf Hover */
+/* .sliding-div:hover {
+    transform: translateX(500px);
+} */
+
+/* Benutzerdefinierte Animation in mehreren Schritten */
+@keyframes roundtrip-animation {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    25% {
+        transform: translate(500px, 0) rotate(0.25turn);
+    }
+
+    50% {
+        transform: translate(500px, 500px) rotate(0.5turn);
+    }
+
+    75% {
+        transform: translate(0px, 500px) rotate(0.75turn);
+    }
+
+    100% {
+        transform: translate(0px, 0px) rotate(1turn);
+    }
+}
