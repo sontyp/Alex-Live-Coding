@@ -1,0 +1,162 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5em;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+header {
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav {
+    height: fit-content;
+    width: 30%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+    background-color: blueviolet;
+}
+
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#about-section h2 {
+    width: 100%;
+}
+
+#about-section article {
+    width: 45%;
+}
+
+#about-section article:first-of-type img {
+    width: 50%;
+    float: right;
+    margin-left: 1em;
+}
+
+#about-section article:last-of-type img {
+    width: 65%;
+    float: left;
+    margin-right: 1em;
+}
+
+.products-thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+}
+
+.products-thumbnail-grid > div {
+    background-color: blue;
+    height: 250px;
+    width: 100%;
+}
+
+.products-thumbnail-grid > div:first-of-type {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+
+
+.products-thumbnail-grid > div:nth-of-type(2) {
+    grid-row: 1 / 3;
+    height: 100%;
+}
+
+.products-thumbnail-grid > div:nth-of-type(6) {
+    grid-column: 2 / 4;
+    height: 100%;
+}
+
+#products-section table {
+    width: 70%;
+    margin: 0 auto;
+    border: 0.2em solid black;
+    border-collapse: collapse;
+    caption-side: top;
+}
+
+#products-section table tr:nth-of-type(even) {
+    background-color: lightgray;
+}
+
+#products-section table td {
+    /* border-top: 0.1em solid black;
+    border-bottom: 0.1em solid black; */
+    padding: 1em;
+}
+
+#products-section table caption {
+    font-size: 2em;
+}
+
+#contact-section form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 20%;
+    margin: 0 auto;
+}
+
+#contact-section form > input, #contact-section form > textarea {
+    margin-bottom: 2em;
+}
+
+
+#consent-fieldset {
+    display: flex;
+    justify-content: space-between;
+    border: 0;
+    margin-bottom: 2em;
+}
+
+footer {
+    height: 10vh;
+    background-color: cornflowerblue;
+}
