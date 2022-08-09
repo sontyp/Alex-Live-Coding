@@ -6,10 +6,23 @@
 
 html {
     font-size: 62.5%;
+
+    /* Scrollt weicher bei Benutzung der Navigation */
+    scroll-behavior: smooth;
 }
 
 h1 {
     font-size: 5rem;
+}
+
+h1::before {
+    font-family: "FontAwesome";
+    content: "\f121";
+}
+
+h1::after {
+    font-family: "FontAwesome";
+    content: "\e490";
 }
 
 h2 {
@@ -31,6 +44,13 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    /* Header soll immer ueber allem schweben */
+    z-index: 99;
 }
 
 nav {
@@ -89,12 +109,20 @@ main {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 1em;
+
+    /* 
+        Legt Distanz zwischen Tiefenebene (z=0) und Betrachter fest. 
+        So erscheinen Rotationen realistischer.
+    */
+    perspective: 1500px;
 }
 
 .products-thumbnail-grid > div {
     background-color: blue;
     height: 250px;
     width: 100%;
+
+    transition: all 1s linear;
 }
 
 .products-thumbnail-grid > div:first-of-type {
@@ -113,6 +141,14 @@ main {
     height: 100%;
 }
 
+
+.products-thumbnail-grid > div:hover {
+    /* background-color: brown; */
+    transform: rotateY(180deg);
+}
+
+
+
 #products-section table {
     width: 70%;
     margin: 0 auto;
@@ -126,14 +162,21 @@ main {
 }
 
 #products-section table td {
-    /* border-top: 0.1em solid black;
-    border-bottom: 0.1em solid black; */
     padding: 1em;
 }
 
 #products-section table caption {
     font-size: 2em;
 }
+
+/* Hintergrundbild fuer Kontakt Sektion */
+#contact-section {
+    background-image: url(../img/contact.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 #contact-section form {
     display: flex;
@@ -159,4 +202,95 @@ main {
 footer {
     height: 10vh;
     background-color: cornflowerblue;
+}
+
+
+/* MEDIA QUERIES */
+/* Small Desktops */
+@media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    header nav {
+        width: 60%;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    header nav {
+        width: 80%;
+    }
+
+    #about-section {
+        flex-direction: column;
+    }
+
+    #about-section article {
+        width: 100%;
+    }
+
+    .products-thumbnail-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: .5em;
+    }
+
+
+    .products-thumbnail-grid > div:first-of-type {
+        grid-column: auto;
+        grid-row: 1;
+    }
+    
+    
+    .products-thumbnail-grid > div:nth-of-type(2) {
+        grid-row: auto;
+    }
+    
+    .products-thumbnail-grid > div:nth-of-type(6) {
+        grid-column: auto;
+    }
+
+    #contact-section form {
+        width: 50%;
+    }
+}
+
+/* Smartphone */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 2rem;
+    }
+
+    p {
+        text-align: justify;
+    }
+
+    header nav {
+        width: 100%;
+    }
+
+    #about-section article:nth-of-type(n) img {
+        width: 100%;
+        float: none;
+        margin: 0;
+    }
+
+    .products-thumbnail-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        gap: .5em;
+    }
+
+
+    #contact-section form {
+        width: 100%;
+    }
 }

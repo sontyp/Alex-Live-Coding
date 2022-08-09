@@ -9,6 +9,15 @@
     
     <title>Klausur-Vorbereitung</title>
 
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -43,6 +52,8 @@
 
         <section id="products-section">
             <h2>Produkte</h2>
+
+            <!-- Produkte Kacheln -->
             <div class="products-thumbnail-grid">
                 <div>
                     Produkt 1
@@ -64,11 +75,12 @@
                 </div>
             </div>
 
-
+            <!-- Produkte Preis Tabelle -->
             <table>
                 <caption>Preistabelle</caption>
                 <thead>
                     <tr>
+                        <th></th>
                         <th>Nummer des Produkts</th>
                         <th>Name des Produkts</th>
                         <th>Preis des Produkts</th>
@@ -76,6 +88,7 @@
                 </thead>
                 <tbody>
                     <tr>
+                        <th rowspan="2">Preisguenstig</th>
                         <td>1</td>
                         <td>Produkt 1</td>
                         <td>100$</td>
@@ -86,6 +99,7 @@
                         <td>1.000$</td>
                     </tr>
                     <tr>
+                        <th rowspan="2">Teuer</th>
                         <td>3</td>
                         <td>Produkt 3</td>
                         <td>10.000$</td>
@@ -96,6 +110,7 @@
                         <td>100.000$</td>
                     </tr>
                     <tr>
+                        <th rowspan="2">Billig</th>
                         <td>5</td>
                         <td>Produkt 5</td>
                         <td>1$</td>
@@ -137,6 +152,7 @@
 
     <footer>
         <h3>Footer</h3>
+        <a href="https://fontawesome.com/icons/" target="_blank" rel="noopener noreferrer">Font Awesome Icons</a>
     </footer>
 </body>
 </html>
