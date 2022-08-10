@@ -1,0 +1,337 @@
+/* CSS Reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBALS */
+html {
+    /* Setze Schriftgroesse auf 10px */
+    font-size: 62.5%;
+}
+h1 {
+    font-size: 6rem;
+}
+h2 {
+    font-size: 4rem;
+}
+p {
+    font-size: 2rem;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    background-color: black;
+    color: white;
+
+    max-width: 80vw;
+    margin: 0 auto;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header */
+header {
+    background-color: black;
+
+    height: 15vh;
+
+    font-size: 1.8rem;
+    text-transform: uppercase;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+header > a {
+    font-size: 3rem;
+    width: 25%;
+}
+
+/* NAV */
+nav {
+    width: 40%;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+nav ul li {
+    display: inline-block;
+}
+
+
+
+/* ---MAIN--- */
+/* ---intro-section--- */
+#intro-section p {
+    max-width: 40%;
+    margin: 2em 0;
+}
+
+#intro-section a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    max-width: fit-content;
+}
+
+/* ---placeholder-section--- */
+
+#placeholder-section img {
+    width: 80%;
+    display: block;
+    margin: 10rem auto;
+}
+
+/* ---aboutus-history-section--- */
+#aboutus-history-section article {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    margin: 10em 0;
+}
+
+#aboutus-history-section article > div {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#aboutus-history-section article > div p {
+    font-size: 22pt;
+    margin-bottom: 1.5em;
+}
+
+#aboutus-history-section article img {
+    width: 40%;
+    height: 100%;
+    align-self: center;
+}
+
+#aboutus-history-section article:nth-child(odd) {
+    flex-direction: row;
+}
+
+#aboutus-history-section article:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* ---project-section--- */
+#project-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 10em 0;
+}
+
+.project-text-frame {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.project-text-frame p {
+    width: 50%;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 10pt;
+}
+
+.project-frame {
+    width: 47%;
+}
+
+.project-frame > a > img {
+    width: 100%;
+}
+
+.project-text-frame > h3 {
+    width: 35%;
+    font-size: 22pt;
+}
+
+
+
+/* ---HELPER--- */
+
+
+
+/* Button-Styling-START */
+.white-button-frame {
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    border-radius: 25px;
+    padding: 2em;
+    text-align: center;
+    
+ }
+
+.white-button-frame span {
+    margin-right: 1em;
+    font-size: 1.2em;
+    font-weight: bolder;
+    letter-spacing: .1em;
+}
+
+.white-button-frame:hover > i {
+    transform: translate(60%);
+    transition: all 1s;
+}
+
+/* Styling der Sektionen für "Our Work" und "Get in touch" */
+.related-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.related-links a{
+    margin: 5em 0;
+}
+
+.pompous-paragraph {
+    font-size: 5rem;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ------------Footer-------- */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+
+    font-family: 'Roboto Mono', sans-serif;
+}
+.left-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+footer .left-footer ul {
+    list-style: none;
+    font-size: 1.6rem;
+}
+footer div ul li {
+    margin: 2rem;
+}
+.right-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    margin-bottom: 3rem;
+    gap: 5em; 
+}
+
+.right-footer .white-button-frame {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding: 1.5rem;
+}
+
+.right-footer a > i {
+    font-size: 34pt;
+}
+
+
+/* Mediaqueries */
+
+@media  screen and (max-width: 1200px) {
+    header {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    header nav {
+        width: 70%;
+    }
+
+
+    #aboutus-history-section article:nth-of-type(n) {
+        flex-direction: column;
+    }
+
+    #aboutus-history-section article > div {
+        width: 100%;
+    }
+
+    #aboutus-history-section article > div p {
+        font-size: 18pt;
+    }
+
+    #aboutus-history-section article img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header nav  {
+        width: 100%;
+    }
+    
+
+    #intro-section p {
+        max-width: 100%;
+    }
+
+    .pompous-paragraph {
+        width: 70%;
+    }
+
+    
+
+    #project-section {
+        flex-direction: column;
+        margin-bottom: 1em;
+    }
+
+    .project-frame {
+        width: 100%;
+        margin-bottom: 10em;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .left-footer {
+        width: 100%;
+    }
+
+    .right-footer {
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .project-text-frame {
+        flex-direction: column;
+    }
+
+    .project-text-frame h3, .project-text-frame p {
+        width: 100%;
+    }
+
+    .pompous-paragraph {
+        font-size: 22pt;
+    }
+}
